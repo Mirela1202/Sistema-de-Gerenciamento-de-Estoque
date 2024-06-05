@@ -1,0 +1,814 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Modak&family=Mogra&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.desktop-LISTA {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop-LISTA .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+}
+
+.desktop-LISTA .frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16.12px;
+  position: absolute;
+  top: 165px;
+  left: 1650px;
+}
+
+.desktop-LISTA .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.34px;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16.1px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .frame-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22.84px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .ultimo-acesso {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12.09px;
+  padding: 13.43px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .ellipse {
+  position: relative;
+  width: 80.6px;
+  height: 80.6px;
+  object-fit: cover;
+}
+
+.desktop-LISTA .frame-3 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .nome {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.34px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 13.4px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop-LISTA .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter-ExtraLight", Helvetica;
+  font-weight: 200;
+  color: #000000;
+  font-size: 10.7px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .frame-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 60px;
+  position: absolute;
+  top: 45px;
+  left: 1652px;
+}
+
+.desktop-LISTA .frame-4 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .frame-5 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .frame-6 {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .icon-bell-ringing {
+  position: relative;
+  width: 13.72px;
+  height: 13.72px;
+}
+
+.desktop-LISTA .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .frame-7 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 4px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 5px;
+  border: 0.5px solid;
+  border-color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
+}
+
+.desktop-LISTA .ellipse-2 {
+  position: relative;
+  width: 6px;
+  height: 6px;
+  background-color: var(--cor-verde-claro-09814a);
+  border-radius: 3px;
+}
+
+.desktop-LISTA .text-wrapper-4 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.5px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: var(--cor-escura-121619);
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop-LISTA .ellipse-3 {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-color: #d9d9d9;
+  border-radius: 32px;
+  border: 3px solid;
+  border-color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
+}
+
+.desktop-LISTA .frame-8 {
+  display: flex;
+  width: 173px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 55px;
+  left: 546px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #e4afff1a;
+}
+
+.desktop-LISTA .img {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.desktop-LISTA .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #47026c;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop-LISTA .overlap {
+  position: absolute;
+  width: 756px;
+  height: 75px;
+  top: 181px;
+  left: 664px;
+  border-radius: 8px;
+
+}
+
+.desktop-LISTA .div-wrapper {
+  display: flex;
+  width: 756px;
+  height: 75px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: var(--collection-1-AMARELO-OVO);
+}
+
+.desktop-LISTA .text-wrapper-6 {
+  position: relative;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #00000099;
+  font-size: 16px;
+  letter-spacing: 0;
+  border-radius: 4px;
+  line-height: normal;
+}
+
+.desktop-LISTA .frame-9 {
+  display: flex;
+  width: 756px;
+  height: 75px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 288px;
+  left: 664px;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: var(--collection-1-AMARELO-OVO);
+}
+
+.desktop-LISTA .icon-minus-circle {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.desktop-LISTA .icon-add-circle-plus {
+  position: relative;
+  width: 17.6px;
+  height: 17.6px;
+}
+
+.desktop-LISTA .frame-10 {
+  display: flex;
+  width: 545px;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 427px;
+  left: 770px;
+}
+
+.desktop-LISTA .text-wrapper-7 {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 20.2px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+
+.desktop-LISTA .frame-11  button{
+  display: flex;
+  width: 250px;
+  left: 350px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  top: 0px;
+  background-color: var(--collection-1-AMARELO-OVO);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.desktop-LISTA .text-wrapper-8 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.45px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--cor-escura-121619);
+  font-size: 18.8px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .frame-12 {
+  position: relative;
+  align-self: stretch;
+  width: 23.12px;
+}
+
+.desktop-LISTA .overlap-group {
+  position: absolute;
+  width: 430px;
+  height: 1088px;
+  top: 0;
+  left: 0;
+  background-color: #47026c;
+  border-radius: 20px;
+}
+
+.desktop-LISTA .frame-13 {
+  display: flex;
+  width: 317px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 318px;
+  left: 57px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #e4afff1a;
+}
+
+.desktop-LISTA .text-wrapper-9 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop-LISTA .frame-14 {
+  display: flex;
+  width: 317px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 362px;
+  left: 57px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #e4afff1a;
+}
+
+.desktop-LISTA .frame-15 {
+  display: flex;
+  width: 317px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 595px;
+  left: 47px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #e4afff1a;
+}
+.desktop-LISTA .frame-15-1 {
+  display: flex;
+  width: 317px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 547px;
+  left: 47px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #e4afff1a;
+}
+
+
+.desktop-LISTA .frame-16 {
+  display: flex;
+  width: 317px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: absolute;
+  top: 406px;
+  left: 57px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #e4afff1a;
+}
+
+.desktop-LISTA .frame-17 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .text-wrapper-10 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--collection-1-AMARELO-OVO);
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop-LISTA .frame-18 {
+  display: flex;
+  width: 289px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 10px 25px;
+  position: absolute;
+  top: 450px;
+  left: 71px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #f5cf0533;
+}
+
+.desktop-LISTA .img-2 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.desktop-LISTA .text-wrapper-11 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.5px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--collection-1-ROSA-BEM-CLARINHO-QUASE-BRANCO);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop-LISTA .frame-19 {
+  display: flex;
+  width: 289px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 10px 25px;
+  position: absolute;
+  top: 490px;
+  left: 71px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #f5cf0533;
+}
+
+.desktop-LISTA .group {
+  position: absolute;
+  width: 163px;
+  height: 98px;
+  top: 78px;
+  left: 73px;
+}
+
+.desktop-LISTA .overlap-group-2 {
+  position: relative;
+  width: 159px;
+  height: 98px;
+}
+
+.desktop-LISTA .text-wrapper-12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Modak", Helvetica;
+  font-weight: 400;
+  color: var(--collection-1-AMARELO-OVO);
+  font-size: 60.1px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .text-wrapper-13 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-family: "Mogra", Helvetica;
+  font-weight: 400;
+  color: var(--collection-1-ROSA-CLARO-BEBE);
+  font-size: 40.2px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop-LISTA .frame-20 {
+  display: flex;
+  flex-direction: column;
+  width: 1012px;
+  align-items: flex-start;
+  position: absolute;
+  top: 530px;
+  left: 534px;
+}
+
+.desktop-LISTA .frame-21 {
+  display: flex;
+  overflow-y: scroll !important;
+  flex-direction: column;
+  height: 338px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22.79px 37.98px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  border-radius: 12.15px;
+  overflow: hidden;
+  border: 1.52px solid;
+  border-color: #0000001a;
+}
+
+.desktop-LISTA .frame-22 {
+  display: flex;
+  margin-bottom: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .lista {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-bottom-width: 0.76px;
+  border-bottom-style: solid;
+  border-color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
+}
+
+.desktop-LISTA .frame-23 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 7.6px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .checkmark {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.desktop-LISTA .text-wrapper-14 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.52px;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--cor-escura-121619);
+  font-size: 15.2px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .frame-24 {
+  display: inline-flex;
+  align-items: center;
+  gap: 7.6px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .frame-25 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 7.55px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-LISTA .icon-minus-circle-2 {
+  position: relative;
+  width: 12.09px;
+  height: 12.09px;
+}
+
+.desktop-LISTA .text-wrapper-15 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.76px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #00000099;
+  font-size: 10.6px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .icon-add-circle-plus-2 {
+  position: relative;
+  width: 13.3px;
+  height: 13.3px;
+  margin-top: -0.6px;
+  margin-right: -0.6px;
+}
+
+.desktop-LISTA .frame-26 button {
+  display: flex;
+  border: none;
+  margin: 0px;
+  align-items: center;
+  justify-content: center;
+  gap: 15.92px;
+  padding: 9.55px;
+  position: relative;
+  background-color: #ffafaf;
+  border-radius: 6.37px;
+  cursor: pointer;
+}
+
+.desktop-LISTA .text-wrapper-16 {
+  position: relative;
+  width: fit-content;
+  margin-top: -9.64px;
+  margin-bottom: -6.46px;
+  margin-left: -7.55px;
+  margin-right: -7.55px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .lista-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0px 0px 7.6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-bottom-width: 0.76px;
+  border-bottom-style: solid;
+  border-color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
+}
+
+.desktop-LISTA .checkmark-2 {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: var(--cor-escura-121619);
+}
+
+.desktop-LISTA .frame-27 {
+  display: flex;
+  flex-direction: column;
+  height: 155px;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.desktop-LISTA .text-wrapper-17 {
+  position: relative;
+  width: 228px;
+  margin-top: -1.52px;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--cor-escura-121619);
+  font-size: 15.2px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .frame-28 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 1227px;
+  left: 1412px;
+}
+
+.desktop-LISTA .icon-minus-circle-3 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-top: -754px;
+  margin-left: -2502px;
+}
+
+.desktop-LISTA .text-wrapper-18 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #00000099;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop-LISTA .icon-add-circle-plus-3 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-top: -754px;
+  margin-left: -2459px;
+}
+.counter-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 10px;
+}
