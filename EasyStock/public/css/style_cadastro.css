@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Mogra&display=swap');
+
+.desktop {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop .frame-wrapper {
+  background-color: #ffffff;
+  width: 1920px;
+  height: 1080px;
+}
+
+.desktop .frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+  padding: 25px 15px;
+  position: relative;
+  top: 75px;
+  left: 783px;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: var(--collection-1-AMARELO-MENOS-OVO);
+}
+
+.desktop .div {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop .frame-2 {
+  display: flex;
+  flex-direction: column;
+  width: 323px;
+  gap: 10px;
+  padding: 16px 20px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: var(--collection-1-AMARELO-OVO);
+}
+
+.desktop .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  opacity: 0.5;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .div-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  top: -12px;
+  left: 20px;
+  background-color: #ffffff;
+}
+
+.desktop .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 80%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.desktop .frame-3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.desktop .p {
+  position: relative;
+  flex: 1;
+  margin-top: -1px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .group {
+  position: absolute;
+  width: 163px;
+  height: 98px;
+  top: -95px;
+  left: 97px;
+}
+
+.desktop .overlap-group {
+  position: relative;
+  width: 159px;
+  height: 98px;
+}
+
+.desktop .text-wrapper-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Modak", Helvetica;
+  font-weight: 400;
+  color: var(--cor-escura-121619);
+  font-size: 60.1px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .text-wrapper-4 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-family: "Mogra", Helvetica;
+  font-weight: 400;
+  color: var(--collection-1-ROSA-CLARO-BEBE);
+  font-size: 40.2px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .frame-4 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop .frame-5 {
+  display: flex;
+  width: 323px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 10px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
+  border-radius: 8px;
+}
+
+.desktop .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .j-possui-login {
+  position: relative;
+  width: fit-content;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .span {
+  color: #000000;
+}
+
+.desktop .text-wrapper-6 {
+  font-family: "Montserrat-Bold", Helvetica;
+  font-weight: 700;
+  color: #47026c;
+}
+
+button.frame-5 {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button.frame-5:hover {
+  background-color: #9176a0; /* Adiciona uma cor de fundo ao passar o mouse */
+}
