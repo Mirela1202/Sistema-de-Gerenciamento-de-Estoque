@@ -27,7 +27,7 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
             $_SESSION["id"] = $usuario["usu_id"];                                                   // Vai ter que alterar o usu_id aqui tbm
             $_SESSION["nome"] = $usuario["usu_nome"];                                               // Vai ter que alterar o usu_nome aqui tbm
 
-            header("Location:../TELA/TELA INICIAL.php");
+            header("Location:../html/TELA INICIAL.php");
         }
         else {
             echo "login ou Senha incorretos!";

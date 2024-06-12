@@ -8,7 +8,7 @@ a{
 .desktop-INICIAL {
     background-color: #ffffff;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
   }
@@ -27,7 +27,7 @@ a{
     align-items: center;
     justify-content: center;
     gap: 16.12px;
-    position: absolute;
+    position: relative;
     top: 165px;
     left: 1650px;
   }

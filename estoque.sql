@@ -99,7 +99,7 @@ INSERT INTO `usuario` (`usu_id`, `usu_login`, `usu_senha`, `usu_nome`, `usu_data
 
 
 DELIMITER //
-CREATE PROCEDURE InsereUsuario (	IN `login` VARCHAR(50), IN senha VARCHAR(50), IN nome VARCHAR(50))
+CREATE PROCEDURE InsereUsuario (	IN login VARCHAR(50), IN senha VARCHAR(50), IN nome VARCHAR(50))
 BEGIN
 	INSERT INTO usuario (usu_login,usu_senha,usu_nome,usu_data_criado) VALUES (login,senha,nome,CURRENT_TIMESTAMP());
 END;
@@ -108,12 +108,11 @@ END;
 
 DELIMITER //
 CREATE FUNCTION ValidaUsuario (usuario VARCHAR(50), senha VARCHAR(50)) 
-RETURNS BOOLEAN
+RETURNS BOOLEAN deterministic
 BEGIN
 	DECLARE usuarioExiste BOOLEAN;
-	
-	SELECT EXISTS(SELECT 1 FROM 	usuario WHERE usu_login = usuario AND usu_senha = senha) INTO usuarioExiste; 
-	RETURN usuarioExiste
+	SELECT EXISTS(SELECT 1 FROM usuario WHERE usu_login = usuario AND usu_senha = senha) INTO usuarioExiste; 
+	RETURN usuarioExiste;
 END;
 // DELIMITER
 

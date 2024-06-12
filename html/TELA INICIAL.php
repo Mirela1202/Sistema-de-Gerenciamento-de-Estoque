@@ -158,7 +158,7 @@ include ("../php/protect.php")
             <div class="frame-19">
               <div class="frame-20">
                 <img class="icon-bell-ringing" src="img/icon-bell-ringing.png" />
-                <div class="text-wrapper-11">J HOPE</div>
+                <div class="text-wrapper-11"><?php echo $_SESSION["nome"]?></div>
               </div>
               <div class="frame-21">
                 <div class="ellipse-2"></div>
@@ -180,7 +180,7 @@ include ("../php/protect.php")
         <img class="checkmark-3" src="img/checkmark-16.svg" />
       
         <button class="frame-22">
-          <div class="text-wrapper-14"><a href="../ADICIONAR ESTOQUE/ADICIONAR_ESTOQUE.html">Adicionar Produtos</a></div>
+          <div class="text-wrapper-14"><a href="../html/ADICIONAR_ESTOQUE.html">Adicionar Produtos</a></div>
         </button>
         <div class="overlap-2">
           <div class="overlap-wrapper">
@@ -191,20 +191,20 @@ include ("../php/protect.php")
           </div>
           <div class="frame-23">
             <img class="img-2" src="../img/smart-home-10.svg" />
-            <div class="text-wrapper-18"><a href="TELA INICIAL.html">Inicio</a></div>
+            <div class="text-wrapper-18"><a href="../html/TELA INICIAL.php">Inicio</a></div>
           </div>
           <div class="frame-24">
             <img class="img-2" src="../img/group0.svg" />
-            <div class="text-wrapper-18"><a href="../LISTA/LISTA.html">Listas</a></div>
+            <div class="text-wrapper-18"><a href="../html/LISTA.html">Listas</a></div>
           </div>
           
           <div class="frame-25">
             <img class="img-2" src="../img/user-10.svg" />
-            <div class="text-wrapper-18"><a href="../USUARIO/usuario.html">Usuário</a></div>
+            <div class="text-wrapper-18"><a href="../html/usuario.html">Usuário</a></div>
           </div>
           <div class="frame-25-1">
             <img class="img-2" src="../img/group0.svg">
-            <div class="text-wrapper-18"><a href="../RELATORIO/relatorio.html">Relatório</a></div>
+            <div class="text-wrapper-18"><a href="../html/relatorio.html">Relatório</a></div>
           </div>
           <div class="frame-26">
             <div class="frame-27">
@@ -216,13 +216,13 @@ include ("../php/protect.php")
           <div class="frame-28">
             <div class="frame-27">
               <img class="img-3" src="../img/group9.svg" />
-              <div class="text-wrapper-20"><a href="../ADICIONAR ESTOQUE/ADICIONAR_ESTOQUE.html">Adicionar Produto</a></div>
+              <div class="text-wrapper-20"><a href="../html/ADICIONAR_ESTOQUE.html">Adicionar Produto</a></div>
             </div>
           </div>
           <div class="frame-29">
             <div class="frame-27">
               <img class="img-3" src="../img/eye-10.svg" />
-              <div class="text-wrapper-20"><a href="../VER ESTOQUE/Ver Estoque.html">Ver Estoque</a></div>
+              <div class="text-wrapper-20"><a href="../html/Ver Estoque.html">Ver Estoque</a></div>
             </div>
           </div>
         </div>

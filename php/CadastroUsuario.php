@@ -15,8 +15,9 @@ if (isset($_POST['nome']) || isset($_POST['senha']) || isset($_POST['usuario']))
       
     else {
 
-        $nome = $conexao->real_escape_string($_POST['nome']);
-        $sql_verifica = "SELECT verificaUsuario('$nome');";
+        $usuario = $conexao->real_escape_string($_POST['usuario']);
+        $senha = $conexao->real_escape_string($_POST['senha']);
+        $sql_verifica = "SELECT validaUsuario('$usuario','$senha');";
         $result_verifica = $conexao->query($sql_verifica);
         $valida= $result_verifica->fetch_array();
         if ( $valida[0] == 1){
@@ -30,7 +31,7 @@ if (isset($_POST['nome']) || isset($_POST['senha']) || isset($_POST['usuario']))
         $sql_code = "CALL insereUsuario('$usuario','$senha','$nome','$email');";
         $resultado = $conexao->query($sql_code) or die("Falha na execução do codigo SQL: ".$conexao->error);
 
-        header("Location:login.html");
+        header("Location:../html/login.html");
         }
     }
 
