@@ -1,3 +1,7 @@
+<?php
+include ("../php/protect.php")
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -84,37 +88,36 @@
         <div class="overlap-group">
           <div class="frame-13">
             <img class="img" src="../img/smart-home-10.svg" />
-            <div class="text-wrapper-9"><a href="../html/TELA INICIAL.html">Inicio</a></div>
+            <div class="text-wrapper-9"><a href="../html/TELA INICIAL.php">Inicio</a></div>
           </div>
           <div class="frame-14">
             <img class="img" src="../img/group0.svg" />
-            <div class="text-wrapper-9"><a href="LISTA.html">Listas</a></div>
+            <div class="text-wrapper-9"><a href="LISTA.php">Listas</a></div>
           </div>
           <div class="frame-15">
             <img class="img" src="../img/user-10.svg" />
-            <div class="text-wrapper-9"><a href="../html/usuario.html">Usuário</a></div>
+            <div class="text-wrapper-9"><a href="../html/usuario.php">Usuário</a></div>
           </div>
           <div class="frame-15-1">
             <img class="img" src="../img/group0.svg">
-            <div class="text-wrapper-9"><a href="../html/relatorio.html">Relatório</a></div>
+            <div class="text-wrapper-9"><a href="../html/relatorio.php">Relatório</a></div>
           </div>
           <div class="frame-16">
             <div class="frame-17">
               <img class="img" src="../img/Vector.svg" />
               <div class="text-wrapper-10">Estoque</div>
             </div>
-            <img class="img" src="../img/arrow-drop-down-1.svg" />
           </div>
           <div class="frame-18">
             <div class="frame-17">
               <img class="img-2" src="../img/group9.svg" />
-              <div class="text-wrapper-11"><a href="../html/ADICIONAR_ESTOQUE.html">Adicionar Estoque</a></div>
+              <div class="text-wrapper-11"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Estoque</a></div>
             </div>
           </div>
           <div class="frame-19">
             <div class="frame-17">
               <img class="img-2" src="../img/eye-10.svg" />
-              <div class="text-wrapper-11"><a href="../html/Ver Estoque.html">Ver Estoque</a></div>
+              <div class="text-wrapper-11"><a href="../html/Ver Estoque.php">Ver Estoque</a></div>
             </div>
           </div>
           <div class="group">

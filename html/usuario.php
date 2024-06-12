@@ -1,3 +1,7 @@
+<?php
+include ("../php/protect.php")
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -104,56 +108,6 @@
             </div>
           </div>
         </div>
-        <div class="frame-16">
-          <div class="frame-17">
-            <div class="frame-18">
-              <img class="img-3" src="../img/🦆 icon _bell ringing_.svg" />
-              <div class="text-wrapper-11">Notificações</div>
-            </div>
-            <div class="group"><div class="ellipse-4"></div></div>
-          </div>
-          <div class="frame-19">
-            <div class="frame-20">
-              <div class="rectangle"></div>
-              <div class="rectangle-2"></div>
-              <div class="rectangle-3"></div>
-            </div>
-            <div class="frame-21">
-              <div class="frame-18">
-                <img class="img-4" src="../img/phone-mobile 1.svg" />
-                <div class="text-wrapper-12">Dispositivos Registrados</div>
-              </div>
-              <img class="img-4" src="../img/phone-mobile 1.svg" />
-            </div>
-            <div class="frame-22">
-              <div class="frame-18">
-                <img class="img-4" src="../img/phone-mobile 1.svg" />
-                <div class="text-wrapper-12">Xiaomi do XINGXINGXONGXI</div>
-              </div>
-              <img class="arrow-circle-down" src="img/image.svg" />
-            </div>
-            <div class="frame-23">
-              <div class="frame-18">
-                <img class="img-4" src="../img/phone-mobile 1 (1).svg" />
-                <div class="text-wrapper-13">Iphone do Thiago</div>
-              </div>
-              <img class="arrow-circle-down" src="img/arrow-circle-down-1-2.svg" />
-            </div>
-            <div class="frame-24">
-              <div class="frame-18">
-                <img class="img-4" src="../img/phone-mobile 1.svg" />
-                <div class="text-wrapper-12">Moto G da Mirela</div>
-              </div>
-              <img class="arrow-circle-down" src="img/arrow-circle-down-1-3.svg" />
-            </div>
-          </div>
-          <div class="frame-17">
-            <div class="frame-18">
-              <img class="security" src="../img/security 1.svg" />
-              <div class="text-wrapper-14">Permissões</div>
-            </div>
-            <img class="img-3" src="img/chevron-double-right-1-2.svg" />
-          </div>
         </div>
         <img class="vector" src="img/vector-3.svg" />
         <img class="vector-2" src="img/vector-4.svg" />
@@ -170,15 +124,15 @@
           </div>
           <div class="frame-26">
             <img class="img-5" src="../img/group0.svg" />
-            <div class="text-wrapper-17"><a href="../html/LISTA.html">Listas</a></div>
+            <div class="text-wrapper-17"><a href="../html/LISTA.php">Listas</a></div>
           </div>
           <div class="frame-27">
             <img class="img-5" src="../img/user-10.svg" />
-            <div class="text-wrapper-17"><a href="../html/usuario.html">Usuário</a></div>
+            <div class="text-wrapper-17"><a href="../html/usuario.php">Usuário</a></div>
           </div>
           <div class="frame-28">
             <img class="img-5" src="../img/group0.svg">
-            <div class="text-wrapper-17"><a href="../html/relatorio.html">Relatório</a></div>
+            <div class="text-wrapper-17"><a href="../html/relatorio.php">Relatório</a></div>
           </div>
           <div class="frame-29">
             <div class="frame-30">
@@ -190,13 +144,13 @@
           <div class="frame-31">
             <div class="frame-30">
               <img class="img-6" src="../img/group9.svg" />
-              <div class="text-wrapper-19"><a href="../html/ADICIONAR_ESTOQUE.html">Adicionar Estoque</a></div>
+              <div class="text-wrapper-19"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Estoque</a></div>
             </div>
           </div>
           <div class="frame-32">
             <div class="frame-30">
               <img class="img-6" src="../img/eye-10.svg" />
-              <div class="text-wrapper-19"><a href="../html/Ver Estoque.html">Ver Estoque</a></div>
+              <div class="text-wrapper-19"><a href="../html/Ver Estoque.php">Ver Estoque</a></div>
             </div>
           </div>
           <div class="rectangle-4"></div>

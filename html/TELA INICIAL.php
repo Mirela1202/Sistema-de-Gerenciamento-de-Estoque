@@ -168,7 +168,7 @@ include ("../php/protect.php")
             <div class="ellipse-3"></div>
           </div>
         </div>
-        <a href="../LISTA/LISTA.html"><div class="plus-wrapper"><img class="plus" src="../img/Group 12.svg" /></div></a>
+        <a href="../html/LISTA.php"><div class="plus-wrapper"><img class="plus" src="../img/Group 12.svg" /></div></a>
         <div class="text-wrapper-13">Compras de Maio</div>
         <div class="group">
           <div class="overlap-group-2">
@@ -180,7 +180,7 @@ include ("../php/protect.php")
         <img class="checkmark-3" src="img/checkmark-16.svg" />
       
         <button class="frame-22">
-          <div class="text-wrapper-14"><a href="../html/ADICIONAR_ESTOQUE.html">Adicionar Produtos</a></div>
+          <div class="text-wrapper-14"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Produtos</a></div>
         </button>
         <div class="overlap-2">
           <div class="overlap-wrapper">
@@ -195,16 +195,16 @@ include ("../php/protect.php")
           </div>
           <div class="frame-24">
             <img class="img-2" src="../img/group0.svg" />
-            <div class="text-wrapper-18"><a href="../html/LISTA.html">Listas</a></div>
+            <div class="text-wrapper-18"><a href="../html/LISTA.php">Listas</a></div>
           </div>
           
           <div class="frame-25">
             <img class="img-2" src="../img/user-10.svg" />
-            <div class="text-wrapper-18"><a href="../html/usuario.html">Usuário</a></div>
+            <div class="text-wrapper-18"><a href="../html/usuario.php">Usuário</a></div>
           </div>
           <div class="frame-25-1">
             <img class="img-2" src="../img/group0.svg">
-            <div class="text-wrapper-18"><a href="../html/relatorio.html">Relatório</a></div>
+            <div class="text-wrapper-18"><a href="../html/relatorio.php">Relatório</a></div>
           </div>
           <div class="frame-26">
             <div class="frame-27">
@@ -216,14 +216,14 @@ include ("../php/protect.php")
           <div class="frame-28">
             <div class="frame-27">
               <img class="img-3" src="../img/group9.svg" />
-              <div class="text-wrapper-20"><a href="../html/ADICIONAR_ESTOQUE.html">Adicionar Produto</a></div>
+              <div class="text-wrapper-20"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Produto</a></div>
             </div>
           </div>
           <div class="frame-29">
             <div class="frame-27">
               <img class="img-3" src="../img/eye-10.svg" />
-              <div class="text-wrapper-20"><a href="../html/Ver Estoque.html">Ver Estoque</a></div>
-            </div>
+              <div class="text-wrapper-20"><a href="../html/Ver Estoque.php">Ver Estoque</a></div>
+            </div>            
           </div>
         </div>
       </div>

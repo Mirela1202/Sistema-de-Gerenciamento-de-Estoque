@@ -1,3 +1,7 @@
+<?php
+include ("../php/protect.php")
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -113,19 +117,19 @@
           </div>
           <div class="frame-19">
             <img class="img-2" src="../img/smart-home-10.svg" />
-            <div class="text-wrapper-13"><a href="../html/TELA INICIAL.html">Inicio</a></div>
+            <div class="text-wrapper-13"><a href="../html/TELA INICIAL.php">Inicio</a></div>
           </div>
           <div class="frame-20">
             <img class="img-2" src="../img/group0.svg" />
-            <div class="text-wrapper-13"><a href="../html/LISTA.html">Listas</a></div>
+            <div class="text-wrapper-13"><a href="../html/LISTA.php">Listas</a></div>
           </div>
           <div class="frame-21">
             <img class="img-2" src="../img/user-10.svg" />
-            <div class="text-wrapper-13"><a href="../html/usuario.html">Usuário</a></div>
+            <div class="text-wrapper-13"><a href="../html/usuario.php">Usuário</a></div>
           </div>
           <div class="frame-21-1">
             <img class="img-2" src="../img/group0.svg"/>
-            <div class="text-wrapper-13"><a href="../html/relatorio.html">Relatório</a></div>
+            <div class="text-wrapper-13"><a href="../html/relatorio.php">Relatório</a></div>
           </div>
           <div class="frame-22">
             <div class="frame-8">
@@ -137,13 +141,13 @@
           <div class="frame-23">
             <div class="frame-8">
               <img class="img" src="../img/group9.svg" />
-              <div class="text-wrapper-15"><a href="../html/ADICIONAR_ESTOQUE.html">Adicionar Estoque</a></div>
+              <div class="text-wrapper-15"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Estoque</a></div>
             </div>
           </div>
           <div class="frame-24">
             <div class="frame-8">
               <img class="img" src="../img/eye-10.svg" />
-              <div class="text-wrapper-15"><a href="../html/Ver Estoque.html">Ver Estoque</a></div>
+              <div class="text-wrapper-15"><a href="../html/Ver Estoque.php">Ver Estoque</a></div>
             </div>
           </div>
           <div class="rectangle"></div>

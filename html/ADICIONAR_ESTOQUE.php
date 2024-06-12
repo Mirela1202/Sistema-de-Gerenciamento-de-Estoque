@@ -1,3 +1,7 @@
+<?php
+include ("../php/protect.php")
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -157,15 +161,15 @@
           </div>
           <div class="frame-24">
             <img class="img-3" src="../img/smart-home-10.svg" />
-            <div class="text-wrapper-17"><a href="../html/TELA INICIAL.html">Inicio</a></div>
+            <div class="text-wrapper-17"><a href="../html/TELA INICIAL.php">Inicio</a></div>
           </div>
           <div class="frame-25">
             <img class="img-3" src="../img/group0.svg" />
-            <div class="text-wrapper-17"><a href="../html/LISTA.html">Listas</a></div>
+            <div class="text-wrapper-17"><a href="../html/LISTA.php">Listas</a></div>
           </div>
           <div class="frame-26">
             <img class="img-3" src="../img/user-10.svg" />
-            <div class="text-wrapper-17"><a href="../html/usuario.html">Usuário</a></div>
+            <div class="text-wrapper-17"><a href="../html/usuario.php">Usuário</a></div>
           </div>
           <div class="frame-27">
             <div class="frame-28">
@@ -177,19 +181,19 @@
           <div class="frame-29">
             <div class="frame-28">
               <img class="img-2" src="../img/group9.svg" />
-              <div class="text-wrapper-19"><a href="../html/ADICIONAR_ESTOQUE.html">Adicionar Estoque</a></div>
+              <div class="text-wrapper-19"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Estoque</a></div>
             </div>
           </div>
           <div class="frame-30">
             <div class="frame-28">
               <img class="img-2" src="../img/eye-10.svg" />
-              <div class="text-wrapper-19"><a href="../html/Ver Estoque.html">Ver Estoque</a></div>
+              <div class="text-wrapper-19"><a href="../html/Ver Estoque.php">Ver Estoque</a></div>
             </div>
           </div>
           <div class="rectangle"></div>
           <div class="frame-31">
             <img class="img-3" src="../img/group0.svg"/>
-            <div class="text-wrapper-17"><a href="../html/relatorio.html">Relatório</a></div>
+            <div class="text-wrapper-17"><a href="../html/relatorio.php">Relatório</a></div>
 
           </div>
         </div>
