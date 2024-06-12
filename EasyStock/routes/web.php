@@ -24,3 +24,8 @@ Route::get('/teste',function(){
 Route::get('/CadastroUsuario',function(){
     return view('cadastro');
 });
+
+
+Route::get('/login',[\App\Http\Controllers\LoginController::class,'MostrarFormularioLogin'])->name('login');
+Route::post('/login',[ \App\Http\Controllers\LoginController::class,'login']);
+Route::post('/logout',[\App\Http\Controllers\LoginController::class,'logout'])->name('logout');
