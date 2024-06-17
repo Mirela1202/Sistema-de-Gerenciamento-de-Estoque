@@ -1,5 +1,8 @@
 <?php
-include ("../php/protect.php")
+session_start();
+include ("../php/protect.php");
+include("../php/conexao.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -15,68 +18,64 @@ include ("../php/protect.php")
       <div class="div">
         <div class="overlap">
           <div class="overlap-group">
-            <div class="div-wrapper"><p class="p">Itens adicionados recentemente ao estoque</p></div>
-            <div class="frame-4">
-              <div class="frame-5">
-                <div class="lista">
-                  <div class="frame-6">
-                    <input type="checkbox" class="checkbox"> 
-                    <div class="text-wrapper-3">Arroz Bernardo - 1kg</div>
-                  </div>
-                  <div class="frame-6"><div class="text-wrapper-4">há 1 dia</div></div>
-                </div>
-                <div class="lista">
-                  <div class="frame-6">
-                    <input type="checkbox" class="checkbox"> 
-                    <div class="text-wrapper-3">Feijão Bernardo - 1kg</div>
-                  </div>
-                  <div class="frame-7"></div>
-                  <div class="text-wrapper-5">há 1 dia</div>
-                </div>
-                <div class="lista">
-                  <div class="frame-6">
-                    <input type="checkbox" class="checkbox"> 
-                    <div class="text-wrapper-3">Picles Bernardo - 1kg</div>
-                  </div>
-                  <div class="text-wrapper-5">xxxxxx</div>
-                </div>
-                <div class="lista">
-                  <div class="frame-6">
-                    <input type="checkbox" class="checkbox"> 
-                    <div class="text-wrapper-3">Creatina Bernardo - 1kg</div>
-                  </div>
-                  <div class="text-wrapper-5">xxxxxx</div>
-                </div>
-              </div>
-              <div class="frame-8"><div class="text-wrapper-6">Ver mais</div></div>
-              <button class="button"> Ver Mais</button>
-            </div>
-          </div>
-          <div class="overlap-2">
-            <div class="frame-9"><input type="text" class="text-wrapper-7" id="productNameInput" placeholder="Nome do produto"></div>
-            
-          </div>
-          <div class="overlap-3">
-            <div class="frame-10">
-              
-              <input type="number" class=" text-wrapper-7" id="quantityInput" placeholder="Quantidade de itens">
-          </div>
-          
-           
-          </div>
-         
+          <form action="../php/CadastroEstoque.php" method="POST">
+            <div class="overlap-2">
+                <div class="frame-9"><input type="text" class="text-wrapper-7" id="descricao" name="descricao" placeholder="Nome do Estoque"></div>
 
-          <div class="frame-14">
-            <button class="button-1"> Adcionar o item</button>
-          </div>
+            </div>
+            <div class="frame-14">
+              <button type="submit" class="button-1"> Criar o Estoque</button>
+            </div>
           <div class="overlap-4">
            
             <div class="frame-wrapper">
-              <div class="frame-16"><div class="text-wrapper-11">Adicionar Produtos no estoque <b><?php echo $_SESSION['nome_estoque'] ?></b></div></div>
+              <div class="frame-16"><div class="text-wrapper-11">Criar Estoque</div></div>
             </div>
             <img class="vector" src="../img/vector-3.svg" />
             <img class="img" src="../img/vector-4.svg" />
           </div>
+          </form>
+            <div class="div-wrapper"><p class="p">Estoques Cadastrados</p></div>
+            <div class="frame-4">
+              <div class="frame-5">
+
+                  <form action = "../php/selecionarEstoque.php" method="POST">
+                  <button class="button" type="SUBMIT"> Selecionar Estoque </button>
+
+
+
+<?php 
+                $usu_id = $_SESSION["id"];
+
+                $sql_consulta = "SELECT estoque.est_id,estoque.est_desc, usuario.usu_nome FROM filiado AS fil LEFT JOIN estoque ON fil.fil_estoq = estoque.est_id LEFT JOIN usuario ON fil.fil_master = usuario.usu_id WHERE fil_id_usuario = '$usu_id' OR fil_master = '$usu_id';";
+                $query = $conexao->query($sql_consulta);
+                $resultados = $query->fetch_all(PDO::FETCH_ASSOC);
+                echo "<div class='lista'>
+                    <div class='frame-6'>
+                      <div class='text-wrapper-3'>NOME DO ESTOQUE</div>
+                      </div>
+                      <div class='frame-6'><div class='text-wrapper-4'>USUARIO QUE CRIOU</div></div>
+                    </div>";
+
+                foreach ($resultados as $linha){
+                  echo "
+                  <div class='lista'>
+                    <div class='frame-6'>
+                      <input type='radio' id='estoque' name='estoque' value=$linha[0]> 
+                      <div class='text-wrapper-3'>$linha[1]</div>
+                      </div>
+                      <div class='frame-6'><div class='text-wrapper-4'>$linha[2]</div></div>
+                    </div>
+                    
+";
+                } 
+               
+?>
+                </form>
+                </div>             
+            </div>
+          </div>
+
         </div>
         <div class="frame-17">
           <div class="frame-18">
@@ -96,10 +95,11 @@ include ("../php/protect.php")
         <div class="frame-22">
           <div class="frame-23">
             <img class="img-2" src="../img/group9.svg" />
-            <div class="text-wrapper-14">Adicionar Produtos no Estoque</div>
+            <div class="text-wrapper-14">Criar um novo Estoque</div>
           </div>
         </div>
-        <div class="overlap-5">
+      </div>
+      <div class="overlap-5">
           <img class="checkmark-3" src="../img/checkmark-16.svg" />
           <div class="rectangle"></div>
           <div class="group">
@@ -123,7 +123,7 @@ include ("../php/protect.php")
           <div class="frame-27">
             <div class="frame-28">
               <img class="img-3" src="../img/Vector.svg" />
-              <div class="text-wrapper-18"><a href="../html/CadastroEstoque.php">Estoque</a></div>
+              <div class="text-wrapper-18">Estoque</div>
             </div>
           </div>
           <div class="frame-29">
@@ -145,7 +145,9 @@ include ("../php/protect.php")
 
           </div>
         </div>
-      </div>
     </div>
+
+    
   </body>
 </html>
+

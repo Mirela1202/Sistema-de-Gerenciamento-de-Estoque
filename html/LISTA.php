@@ -1,5 +1,6 @@
 <?php
-include ("../php/protect.php")
+include ("../php/protect.php");
+include ("../php/conexao.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,49 +16,12 @@ include ("../php/protect.php")
   <body>
     <div class="desktop-LISTA">
       <div class="div">
-        <div class="frame">
-          <div class="text-wrapper">Quem alterou por último</div>
-          <div class="frame-2">
-            <div class="ultimo-acesso">
-              <img class="ellipse" src="../img/dianne.png" />
-              <div class="frame-3">
-                <div class="nome">Dianne</div>
-                <div class="text-wrapper-2">Último acesso</div>
-                <div class="text-wrapper-2">16/08/2023</div>
-              </div>
-            </div>
-            <div class="ultimo-acesso">
-              <img class="ellipse" src="../img/felipe.png" />
-              <div class="frame-3">
-                <div class="nome">Philip</div>
-                <div class="text-wrapper-2">Último acesso</div>
-                <div class="text-wrapper-2">16/08/2023</div>
-              </div>
-            </div>
-            <div class="ultimo-acesso">
-              <img class="ellipse" src="../img/cristiano.png" />
-              <div class="frame-3">
-                <div class="nome">Kristin</div>
-                <div class="text-wrapper-2">Último acesso</div>
-                <div class="text-wrapper-2">16/08/2023</div>
-              </div>
-            </div>
-            <div class="ultimo-acesso">
-              <img class="ellipse" src="../img/japa.png" />
-              <div class="frame-3">
-                <div class="nome">Arlene</div>
-                <div class="text-wrapper-2">Último acesso</div>
-                <div class="text-wrapper-2">16/08/2023</div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="frame-wrapper">
           <div class="frame-4">
             <div class="frame-5">
               <div class="frame-6">
                 <img class="icon-bell-ringing" src="../img/icon-bell-ringing.png" />
-                <div class="text-wrapper-3">J HOPE</div>
+                <div class="text-wrapper-3"><?php echo $_SESSION["nome"]?></div>
               </div>
               <div class="frame-7">
                 <div class="ellipse-2"></div>
@@ -105,7 +69,7 @@ include ("../php/protect.php")
           <div class="frame-16">
             <div class="frame-17">
               <img class="img" src="../img/Vector.svg" />
-              <div class="text-wrapper-10">Estoque</div>
+              <div class="text-wrapper-10"><a href="../html/CadastroEstoque.php">Estoque</a></div>
             </div>
           </div>
           <div class="frame-18">
@@ -130,7 +94,12 @@ include ("../php/protect.php")
         <div class="frame-20">
           <div class="frame-21">
             <div class="frame-22">
-              <div class="lista">
+              <?php 
+                   
+
+              ?>
+<!--  -->
+              <div class="lista-2">
                 <div class="frame-23">
                   
                   <div class="text-wrapper-14">Arroz Tio João- 1kg</div>

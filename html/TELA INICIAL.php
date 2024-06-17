@@ -13,48 +13,10 @@ include ("../php/protect.php")
   <body>
     <div class="desktop-INICIAL">
       <div class="div">
-        <div class="frame">
-          <div class="text-wrapper">Quem alterou por último</div>
-          <div class="frame-2">
-            <div class="ultimo-acesso">
-              <img class="ellipse" src="../img/dianne.png" />
-              <div class="frame-3">
-                <div class="nome">Dianne</div>
-                <div class="text-wrapper-2">Último acesso</div>
-                <div class="text-wrapper-2">16/08/2023</div>
-              </div>
-            </div>
-            <div class="ultimo-acesso">
-              <img class="ellipse" src="../img/felipe.png" />
-              <div class="frame-3">
-                <div class="nome">Philip</div>
-                <div class="text-wrapper-2">Último acesso</div>
-                <div class="text-wrapper-2">16/08/2023</div>
-              </div>
-            </div>
-            <div class="ultimo-acesso">
-              <img class="ellipse" src="../img/cristiano.png" />
-              <div class="frame-3">
-                <div class="nome">Kristin</div>
-                <div class="text-wrapper-2">Último acesso</div>
-                <div class="text-wrapper-2">16/08/2023</div>
-              </div>
-            </div>
-            <div class="ultimo-acesso">
-              <img class="ellipse" src="../img/japa.png" />
-              <div class="frame-3">
-                <div class="nome">Arlene</div>
-                <div class="text-wrapper-2">Último acesso</div>
-                <div class="text-wrapper-2">16/08/2023</div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="overlap">
           <div class="overlap-group">
             <div class="frame-4">
               <div class="div-wrapper"><div class="text-wrapper-3">Itens na sua conta</div></div>
-              <div class="frame-5"><div class="text-wrapper-4">Em falta</div></div>
             </div>
             <img class="vector" src="img/vector-1.svg" />
             <img class="img" src="img/vector-2.svg" />
@@ -209,9 +171,10 @@ include ("../php/protect.php")
           <div class="frame-26">
             <div class="frame-27">
               <img class="img-2" src="../img/Vector.svg" />
-              <div class="text-wrapper-19">Estoque</div>
+              <div class="text-wrapper-19">
+                <a class="estoque" href="../html/CadastroEstoque.php">Estoque</a>  
+              </div>
             </div>
-            <img class="img-2" src="img/arrow-drop-down-1.svg" />
           </div>
           <div class="frame-28">
             <div class="frame-27">

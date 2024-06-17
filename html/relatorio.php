@@ -60,7 +60,7 @@ include ("../php/protect.php")
             <div class="frame-5">
               <div class="frame-6">
                 <img class="icon-bell-ringing" src="../img/icon-bell-ringing.png" />
-                <div class="text-wrapper-3">J HOPE</div>
+                <div class="text-wrapper-3"><?php echo $_SESSION["nome"]?></div>
               </div>
               <div class="frame-7">
                 <div class="ellipse-2"></div>
@@ -134,9 +134,8 @@ include ("../php/protect.php")
           <div class="frame-22">
             <div class="frame-8">
               <img class="img-2" src="../img/Vector.svg" />
-              <div class="text-wrapper-14">Estoque</div>
+              <div class="text-wrapper-14"><a href="../html/CadastroEstoque.php">Estoque</a></div>
             </div>
-            <img class="img-2" src="../img/arrow-drop-down-1.svg" />
           </div>
           <div class="frame-23">
             <div class="frame-8">

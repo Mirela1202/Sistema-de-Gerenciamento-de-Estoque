@@ -1,0 +1,97 @@
+.desktop-no-logado{
+    background-color: #ffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.desktop-no-logado .frame-wrapper{
+    background-color: #ffff;
+    width: 1920px;
+    height: 1080px;
+}
+
+.desktop-no-logado .frame{
+    position: relative;
+    width: 964px;
+    height: 547px;
+    top: 267px;
+    left: 478px;
+    background-color: #ffff;
+    border-radius: 10px;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-color: #f5cf05;
+    box-shadow: 0px 4px 19.1px #0000001a;
+}
+
+.desktop-no-logado .not_logado{
+    position: absolute;
+    width: 474px;
+    top: 338px;
+    left: 241px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: -0.46px;
+    line-height: 25px;
+}
+
+.desktop-no-logado .button-wrapper{
+    display: flex;
+    width: 150px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    gap: 15.19px;
+    padding: 7.6px 37.98px;
+    position: absolute;
+    top: 460px;
+    left: 382px;
+    background-color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
+    border-radius: 7.6px;
+    border: none; 
+    cursor: pointer; 
+}
+
+
+.desktop-no-logado .text-wrapper{
+    position: relative;
+    width: fit-content;
+    margin-left: -1.48px;
+    margin-right: -1.48px;
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+
+}
+
+.desktop-no-logado .OIP{
+    position: absolute;
+    width: 347px;
+    height: 260px;
+    top: 0;
+    left: 304px;
+    object-fit: cover;
+}
+
+.desktop-no-logado .div{
+    position: absolute;
+    width: 239px;
+    top: 264px;
+    left: 371px;
+    font-family: "Montserrat-ExtraBoldItalic", Helvetica;
+    font-weight: 800;
+    font-style: italic;
+    color: #000000;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}

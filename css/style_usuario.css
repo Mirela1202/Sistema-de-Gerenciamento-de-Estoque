@@ -5,6 +5,17 @@ a{
   color: #ffffff;
 }
 
+a.sair{
+  color:var(--collection-1-ROXO-ESCURO-CONTRASTE);
+  border: #000000;
+}
+
+.button-logout {
+border-width: 0px;
+}
+
+
+
 .desktop-usuario {
     background-color: #ffffff;
     display: flex;

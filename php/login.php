@@ -25,7 +25,8 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
             }
             
             $_SESSION["id"] = $usuario["usu_id"];                                                   // Vai ter que alterar o usu_id aqui tbm
-            $_SESSION["nome"] = $usuario["usu_nome"];                                               // Vai ter que alterar o usu_nome aqui tbm
+            $_SESSION["nome"] = $usuario["usu_nome"];
+            $_SESSION["estoque"] = 0;                                               // Vai ter que alterar o usu_nome aqui tbm
 
             header("Location:../html/TELA INICIAL.php");
         }
