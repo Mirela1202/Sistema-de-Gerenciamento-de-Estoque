@@ -1,5 +1,6 @@
 <?php
-include ("../php/protect.php")
+include ("../php/protect.php");
+include ("../php/conexao.php");
 ?>
 
 <!DOCTYPE html>
@@ -87,171 +88,76 @@ include ("../php/protect.php")
         </div>
         <div class="frame-17">
           <div class="frame-18">
-<!-- Começa bagunca -->
+          <div class='frame-24'>
+
 <?php
 
+                $usu_id = $_SESSION["id"];
+                $estoq_id = $_SESSION["estoque"];
+
+                $sql_consulta = "SELECT prod_nome,prod_qtd,prod_id, DATE_FORMAT(prod_inserted_at,'%d/%m/%Y %H:%i:%s') AS dataInserida FROM produto WHERE prod_estoque = $estoq_id";
+                $query = $conexao->query($sql_consulta);
+                $resultados = $query->fetch_all(PDO::FETCH_ASSOC);
+                    $count=0;
+                foreach ($resultados as $linha){
+                  $count= $count + 1;
+                  echo "<div class='lista-2'>
+                          <div class='frame-20'>
+                            <div class='text-wrapper-10'>$linha[0]</div>
+                            </div>
+                            <div class='frame-21'><div class='frame-22'>
+                    <div class='text-wrapper-11'>
+                      <button id='decrease$count'>-</button>
+                      <input type='number' id='count$count' value='$linha[1]' min='0'>
+                      <button id='increase$count'>+</button>
+                    </div>
+                  </div>
+                  <div class='frame-23'><div class='text-wrapper-12'>
+                    <form action='../php/removerProduto.php' method='post'>
+                      <input type='hidden' name='id' value='$linha[2]'>
+                      <button type='submit' value='Remover'>Excluir</button>
+                    </form>
+                    
+                    </div></div>
+                    <div class='frame-23-diferente'><div class='text-wrapper-12'>
+                    <form action='../php/SalvarProduto.php' method='post'>
+                      <input type='hidden' name='id' value='$linha[2]'>
+                      <input type='hidden' name='qtd' id=quantidade$count value='$linha[1]'>
+                      <button type='submit' value='Remover'>Salvar</button>
+                    </form>
+                    
+                    </div></div>
+                </div>
+                <script>
+                document.getElementById('increase$count').addEventListener('click', function() {
+                    var countInput = document.getElementById('count$count');
+                    var countInput2 = document.getElementById('quantidade$count');
+                    countInput2.value = parseInt(countInput2.value) + 1;
+                    countInput.value = parseInt(countInput.value) + 1;
+                  });
+
+                  document.getElementById('decrease$count').addEventListener('click', function() {
+                    var countInput = document.getElementById('count$count');
+                    var countInput2 = document.getElementById('quantidade$count');
+                    var countValue = parseInt(countInput.value);
+                    if (countValue > 0) {
+                      countInput.value = countValue - 1;
+                      countInput2.value = countValue - 1;
+                    }
+                  });
+                  </script>
+
+                </div>
+ ";
+                }
 ?>
-<!-- Acaba BAGUNÇA -->
-            <div class="frame-19">
-              <div class="lista">
-                <div class="frame-20">
-                 
-                  <div class="text-wrapper-10">Arroz Tio João- 1kg</div>
-                </div>
-                <div class="frame-21">
-                  <div class="frame-22">
-                    
-                    
-                    <div class="text-wrapper-11">
-                      <button id="decrease1">-</button>
-                      <input type="number" id="count1" value="0" min="0">
-                      <button id="increase1">+</button>
-                    </div>
-                  </div>
-                  <div class="frame-23"><div class="text-wrapper-12">Remover</div></div>
-                </div>
-              </div>
-              <div class="lista-2">
-                <div class="frame-20">
-                  
-                  <div class="text-wrapper-10">Refrigerante (chiuau)</div>
-                </div>
-                <div class="frame-21">
-                  <div class="frame-22">
-                    
-                    <div class="text-wrapper-11">
-                      <button id="decrease2">-</button>
-                      <input type="number" id="count2" value="0" min="0">
-                      <button id="increase2">+</button>
-                    </div>
-                  </div>
-                
-                  <button class="frame-23">
-                    <div class="text-wrapper-12">Remover</div>
-                  </button>
-                
-                </div>
-              </div>
-              <div class="lista-2">
-                <div class="frame-20">
-                 
-                  <div class="text-wrapper-10">Feijão Carioca</div>
-                </div>
-                <div class="frame-21">
-                  <div class="frame-22">
-                    
-                    
-                    <div class="text-wrapper-11">
-                      <button id="decrease3">-</button>
-                      <input type="number" id="count3" value="0" min="0">
-                      <button id="increase3">+</button>
-                    </div>
-                  </div>
-                  <div class="frame-23"><div class="text-wrapper-12">Remover</div></div>
-                </div>
-              </div>
-              <div class="lista-2">
-                <div class="frame-20">
-                  
-                  <div class="text-wrapper-10">Água de coco (West)</div>
-                </div>
-                <div class="frame-21">
-                  <div class="frame-22">
-                    
-                    
-                    <div class="text-wrapper-11">
-                      <button id="decrease4">-</button>
-                      <input type="number" id="count4" value="0" min="0">
-                      <button id="increase4">+</button>
-                    </div>
-                    
-                  </div>
-                  <div class="frame-23"><div class="text-wrapper-12">Remover</div></div>
-                </div>
-              </div>
+
             </div>
-            <div class="frame-24">
-              <div class="lista-2">
-                <div class="frame-20">
-                 
-                  <div class="text-wrapper-10">Arroz Tio João- 1kg</div>
-                </div>
-                <div class="frame-21">
-                  <div class="frame-22">
-                    
-                    
-                    <div class="text-wrapper-11">
-                      <button id="decrease5">-</button>
-                      <input type="number" id="count5" value="0" min="0">
-                      <button id="increase5">+</button>
-                    </div>
-                    
-                  </div>
-                  <div class="frame-23"><div class="text-wrapper-12">Remover</div></div>
-                </div>
-              </div>
-              <div class="lista-2">
-                <div class="frame-20">
-                  
-                  <div class="text-wrapper-13">Molho de Tomate(Elefante)</div>
-                </div>
-                <div class="frame-21">
-                  <div class="frame-22">
-                    
-                    
-                    <div class="text-wrapper-11">
-                      <button id="decrease6">-</button>
-                      <input type="number" id="count6" value="0" min="0">
-                      <button id="increase6">+</button>
-                    </div>
-                    
-                  </div>
-                  <div class="frame-23"><div class="text-wrapper-12">Remover</div></div>
-                </div>
-              </div>
-              <div class="lista-2">
-                <div class="frame-20">
-                  
-                  <p class="text-wrapper-10">Carne Bovina - (Acem Moído)</p>
-                </div>
-                <div class="frame-21">
-                  <div class="frame-22">
-                    
-                    
-                    <div class="text-wrapper-11">
-                      <button id="decrease7">-</button>
-                      <input type="number" id="count7" value="0" min="0">
-                      <button id="increase7">+</button>
-                    </div>
-                    
-                  </div>
-                  <div class="frame-23"><div class="text-wrapper-12">Remover</div></div>
-                </div>
-              </div>
-              <div class="lista-2">
-                <div class="frame-20">
-                  
-                  <p class="text-wrapper-10">Carne de Frango - (Asinha)</p>
-                </div>
-                <div class="frame-21">
-                  <div class="frame-22">
-                   
-                    
-                    <div class="text-wrapper-11">
-                      <button id="decrease8">-</button>
-                      <input type="number" id="count8" value="0" min="0">
-                      <button id="increase8">+</button>
-                    </div>
-                    
-                  </div>
-                  <div class="frame-23"><div class="text-wrapper-12">Remover</div></div>
-                </div>
-              </div>
-            </div>
+
           </div>
+
         </div>
       </div>
     </div>
   </body>
-  <script src="../js/java_verestoque.js"></script>
 </html>

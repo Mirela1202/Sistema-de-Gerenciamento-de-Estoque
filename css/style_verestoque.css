@@ -595,13 +595,7 @@ a{
  
 }
 
-.desktop-VER-ESTOQUE .frame-22 {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 7.55px;
-  position: relative;
-  flex: 0 0 auto;
-}
+
 
 .desktop-VER-ESTOQUE .icon-minus-circle {
   position: relative;
@@ -641,10 +635,42 @@ a{
     background-color: #ffafaf;
     border-radius: 6.37px;
     cursor: pointer;
-    width: 53%;
+    width: 100%;
 }
 
 .desktop-VER-ESTOQUE .frame-23 button {
+  display: flex;
+  border: none;
+  margin: 0px;
+  margin-left: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 15.92px;
+  padding: 9.55px;
+  position: relative;
+  background-color: #ffafaf;
+  border-radius: 6.37px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.desktop-VER-ESTOQUE .frame-23-diferente {
+  display: flex;
+    border: none;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    gap: 15.92px;
+    padding: 15px;
+    position: relative;
+    background-color: green;
+    border-radius: 6.37px;
+    cursor: pointer;
+    width: 53%;
+}
+
+.desktop-VER-ESTOQUE .frame-23-diferente button {
   display: flex;
   border: none;
   margin: 0px;
@@ -653,7 +679,7 @@ a{
   gap: 15.92px;
   padding: 9.55px;
   position: relative;
-  background-color: #ffafaf;
+  background-color: green;
   border-radius: 6.37px;
   cursor: pointer;
 }
@@ -702,6 +728,14 @@ a{
   height: 18px;
 }
 
+.desktop-VER-ESTOQUE .frame-22 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 7.55px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
 .desktop-VER-ESTOQUE .frame-24 {
   display: flex;
   flex-direction: column;
@@ -731,7 +765,7 @@ a{
 }
 
 button {
-  width: 30px;
+  width: 40px;
   height: 30px;
   font-size: 16px;
   background-color: #f0f0f0;
