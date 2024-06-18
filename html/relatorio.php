@@ -23,11 +23,7 @@ include ("../php/protect.php")
             <div class="frame-5">
               <div class="frame-6">
                 <img class="icon-bell-ringing" src="../img/icon-bell-ringing.png" />
-                <div class="text-wrapper-3"><?php echo "$_SESSION[nome] -- ID:$_SESSION[id]"?></div>
-              </div>
-              <div class="frame-7">
-                <div class="ellipse-2"></div>
-                <div class="text-wrapper-4">Lista disponível</div>
+                <div class="text-wrapper-3"><?php echo "$_SESSION[nome]"?></div>
               </div>
             </div>
             <div class="ellipse-3"></div>
@@ -36,27 +32,11 @@ include ("../php/protect.php")
         <div class="div-wrapper">
           <div class="frame-8">
             <img class="img" src="../img/group9.svg" />
-            <div class="text-wrapper-5">Adicionar Produtos</div>
+            <div class="text-wrapper-5">Relatorio</div>
           </div>
         </div>
         <img class="checkmark" src="../img/checkmark-16.svg" />
-        <div class="frame-9">
-          <div class="frame-10">
-            <label for="data-inicial" class="text-wrapper-6">Data Inicial</label>
-            <input type="date" id="data-inicial" name="data-inicial" class="input-field" />
-          </div>
-        </div>
-        <div class="frame-11">
-          <div class="frame-10">
-            <label for="data-final" class="text-wrapper-6">Data Final</label>
-            <input type="date" id="data-final" name="data-final" class="input-field" />
-            
-          </div>
-          
-        </div>
-        <div class="frame-15">
-          <button type="submit" class="text-wrapper-8">Carregar Relatório</button>
-        </div>
+
          <div class="frame-12">
 <?php
   include ("../php/conexao.php");
@@ -103,14 +83,6 @@ echo "</table>";
 
         </div>
         </div>
-        <!-- <div class="frame-12">
-          <div class="frame-13"><div class="text-wrapper-7">Lista</div></div>
-          <input type="text" class="input-field" placeholder="Digite a lista que deseja" />
-        </div>
-        <div class="frame-14">
-          <div class="frame-13"><div class="text-wrapper-7">Usuário</div></div>
-          <input type="text" class="input-field" placeholder="Digite o nome do usuário que deseja" />
-        </div> -->
 
         <div class="overlap">
           <div class="frame-16">
@@ -131,31 +103,27 @@ echo "</table>";
             <img class="img-2" src="../img/smart-home-10.svg" />
             <div class="text-wrapper-13"><a href="../html/TELA INICIAL.php">Inicio</a></div>
           </div>
-          <div class="frame-20">
-            <img class="img-2" src="../img/group0.svg" />
-            <div class="text-wrapper-13"><a href="../html/LISTA.php">Listas</a></div>
-          </div>
-          <div class="frame-21">
+          <div class="frame-21-1">
             <img class="img-2" src="../img/user-10.svg" />
             <div class="text-wrapper-13"><a href="../html/usuario.php">Usuário</a></div>
           </div>
-          <div class="frame-21-1">
+          <div class="frame-24">
             <img class="img-2" src="../img/group0.svg"/>
             <div class="text-wrapper-13"><a href="../html/relatorio.php">Relatório</a></div>
           </div>
-          <div class="frame-22">
+          <div class="frame-20">
             <div class="frame-8">
               <img class="img-2" src="../img/Vector.svg" />
               <div class="text-wrapper-14"><a href="../html/CadastroEstoque.php">Estoque</a></div>
             </div>
           </div>
-          <div class="frame-23">
+          <div class="frame-22">
             <div class="frame-8">
               <img class="img" src="../img/group9.svg" />
-              <div class="text-wrapper-15"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Estoque</a></div>
+              <div class="text-wrapper-15"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Produto</a></div>
             </div>
           </div>
-          <div class="frame-24">
+          <div class="frame-23">
             <div class="frame-8">
               <img class="img" src="../img/eye-10.svg" />
               <div class="text-wrapper-15"><a href="../html/Ver Estoque.php">Ver Estoque</a></div>

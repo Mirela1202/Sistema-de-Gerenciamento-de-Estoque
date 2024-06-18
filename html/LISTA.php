@@ -24,8 +24,6 @@ include ("../php/conexao.php");
                 <div class="text-wrapper-3"><?php echo $_SESSION["nome"]?></div>
               </div>
               <div class="frame-7">
-                <div class="ellipse-2"></div>
-                <div class="text-wrapper-4">Lista disponível</div>
               </div>
             </div>
             <div class="ellipse-3"></div>

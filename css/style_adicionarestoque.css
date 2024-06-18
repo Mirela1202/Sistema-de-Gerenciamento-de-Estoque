@@ -152,7 +152,7 @@ a{
   top: 610px;
   left: 0;
   border-radius: 12.15px;
-  overflow: hidden;
+  overflow-y: scroll !important;
   border: 1.52px solid;
   border-color: #0000001a;
 }
@@ -847,6 +847,21 @@ a{
   background-color: #f5cf05;
   border-radius: 23px;
 }
+
+.button-1-1 {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 377px;
+  padding: 10px;
+  position: absolute;
+  top: 400px;
+  left: 339px;
+  background-color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
+  border-radius: 8px;
+   display: inline-block;
+}
+
 .button-1 {
     color: #fff;
     border: none;
@@ -854,7 +869,7 @@ a{
     width: 377px;
     padding: 10px;
     position: absolute;
-    top: 520px;
+    top: 400px;
     left: 339px;
     background-color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
     border-radius: 8px;

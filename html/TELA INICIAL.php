@@ -92,10 +92,6 @@ include ("../php/protect.php")
                 <img class="icon-bell-ringing" src="img/icon-bell-ringing.png" />
                 <div class="text-wrapper-11"><?php echo $_SESSION["nome"]?></div>
               </div>
-              <div class="frame-21">
-                <div class="ellipse-2"></div>
-                <div class="text-wrapper-12">Lista disponível</div>
-              </div>
             </div>
             <div class="ellipse-3"></div>
           </div>
@@ -103,10 +99,6 @@ include ("../php/protect.php")
         <a  ><div class="plus-wrapper"><img class="plus" src="../img/Group 12.svg" /></div></a>
         <div class="text-wrapper-13">Compras de Maio</div>
         <div class="group">
-          <div class="overlap-group-2">
-            <div class="img-wrapper"><img class="plus-2" src="../img/Plus.svg" /></div>
-            <img class="ellipse-4" src="../img/dianne.png" />
-          </div>
         </div>
         <img class="vector-2" src="img/vector.svg" />
         <img class="checkmark-3" src="img/checkmark-16.svg" />

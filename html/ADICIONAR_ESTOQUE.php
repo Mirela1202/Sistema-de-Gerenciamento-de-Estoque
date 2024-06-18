@@ -84,10 +84,6 @@ include ("../php/protect.php");
                 <img class="icon-bell-ringing" src="../img/icon-bell-ringing.png" />
                 <div class="text-wrapper-12"><?php echo $_SESSION["nome"]?></div>
               </div>
-              <div class="frame-21">
-                <div class="ellipse-2"></div>
-                <div class="text-wrapper-13">Lista disponível</div>
-              </div>
             </div>
             <div class="ellipse-3"></div>
           </div>
@@ -111,34 +107,31 @@ include ("../php/protect.php");
             <img class="img-3" src="../img/smart-home-10.svg" />
             <div class="text-wrapper-17"><a href="../html/TELA INICIAL.php">Inicio</a></div>
           </div>
-          <div class="frame-25">
-            <img class="img-3" src="../img/group0.svg" />
-            <div class="text-wrapper-17"><a href="../html/LISTA.php">Listas</a></div>
-          </div>
-          <div class="frame-26">
+
+          <div class="frame-31">
             <img class="img-3" src="../img/user-10.svg" />
             <div class="text-wrapper-17"><a href="../html/usuario.php">Usuário</a></div>
           </div>
-          <div class="frame-27">
+          <div class="frame-25">
             <div class="frame-28">
               <img class="img-3" src="../img/Vector.svg" />
               <div class="text-wrapper-18"><a href="../html/CadastroEstoque.php">Estoque</a></div>
             </div>
           </div>
-          <div class="frame-29">
+          <div class="frame-27">
             <div class="frame-28">
               <img class="img-2" src="../img/group9.svg" />
-              <div class="text-wrapper-19"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Estoque</a></div>
+              <div class="text-wrapper-19"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Produto</a></div>
             </div>
           </div>
-          <div class="frame-30">
+          <div class="frame-29">
             <div class="frame-28">
               <img class="img-2" src="../img/eye-10.svg" />
               <div class="text-wrapper-19"><a href="../html/Ver Estoque.php">Ver Estoque</a></div>
             </div>
           </div>
           <div class="rectangle"></div>
-          <div class="frame-31">
+          <div class="frame-30">
             <img class="img-3" src="../img/group0.svg"/>
             <div class="text-wrapper-17"><a href="../html/relatorio.php">Relatório</a></div>
 

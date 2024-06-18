@@ -21,10 +21,7 @@ include ("../php/conexao.php");
                 <img class="icon-bell-ringing" src="img/icon-bell-ringing.png" />
                 <div class="text-wrapper-3"><?php echo $_SESSION["nome"]?></div>
               </div>
-              <div class="frame-7">
-                <div class="ellipse-2"></div>
-                <div class="text-wrapper-4">Lista disponível</div>
-              </div>
+
             </div>
             <div class="ellipse-3"></div>
           </div>
@@ -38,7 +35,7 @@ include ("../php/conexao.php");
         <img class="checkmark" src="img/checkmark-16.svg" />
         <div class="overlap">
           <div class="frame-9">
-            <div class="frame-10"><p class="p">Todos os itens do Estoque</p></div>
+            <div class="frame-10"><p class="p">Todos os itens do Estoque <b><?php echo $_SESSION['nome_estoque']?></b></p></div>
           </div>
           <img class="vector" src="img/vector-3.svg" />
           <img class="vector-2" src="img/vector-4.svg" />
@@ -54,31 +51,28 @@ include ("../php/conexao.php");
             <img class="img-2" src="../img/smart-home-10.svg" />
             <div class="text-wrapper-7"><a href="../html/TELA INICIAL.php">Inicio</a></div>
           </div>
-          <div class="frame-12">
-            <img class="img-2" src="../img/group0.svg" />
-            <div class="text-wrapper-7"><a href="../html/LISTA.php">Listas</a></div>
-          </div>
-          <div class="frame-13-1">
+
+          <div class="frame-13">
             <img class="img-2" src="../img/user-10.svg" />
             <div class="text-wrapper-7"><a href="../html/usuario.php">Usuário</a></div>
           </div>
-          <div class="frame-13">
+          <div class="frame-16">
             <img class="img-2" src="../img/group0.svg"/>
             <div class="text-wrapper-7"><a href="../html/relatorio.php">Relatório</a></div>
           </div>
-          <div class="frame-14">
+          <div class="frame-12">
             <div class="frame-8">
-              <img class="img-2" src="../img/group0.svg" />
+              <img class="img-2" src="../img/Vector.svg" />
               <div class="text-wrapper-8"><a href="../html/CadastroEstoque.php">Estoque</a></div>
             </div>
           </div>
-          <div class="frame-15">
+          <div class="frame-14">
             <div class="frame-8">
               <img class="img" src="../img/group9.svg" />
-              <div class="text-wrapper-9"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Estoque</a></div>
+              <div class="text-wrapper-9"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Produto</a></div>
             </div>
           </div>
-          <div class="frame-16">
+          <div class="frame-15">
             <div class="frame-8">
               <img class="img" src="../img/eye-10.svg" />
               <div class="text-wrapper-9"><a href="../html/Ver Estoque.php">Ver Estoque</a></div>
