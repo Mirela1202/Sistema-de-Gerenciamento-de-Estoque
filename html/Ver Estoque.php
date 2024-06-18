@@ -30,7 +30,7 @@ include ("../php/protect.php")
         </div>
         <div class="div-wrapper">
           <div class="frame-8">
-            <img class="img" src="img/task-list-add-1-2.svg" />
+            <img class="img" src="../img/eye-10.svg" />
             <div class="ver-estoque">Ver Estoque</div>
           </div>
         </div>
@@ -87,6 +87,11 @@ include ("../php/protect.php")
         </div>
         <div class="frame-17">
           <div class="frame-18">
+<!-- Começa bagunca -->
+<?php
+
+?>
+<!-- Acaba BAGUNÇA -->
             <div class="frame-19">
               <div class="lista">
                 <div class="frame-20">

@@ -1,5 +1,6 @@
 <?php
-include ("../php/protect.php")
+include ("../php/conexao.php");
+include ("../php/protect.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,62 +16,60 @@ include ("../php/protect.php")
       <div class="div">
         <div class="overlap">
           <div class="overlap-group">
-            <div class="div-wrapper"><p class="p">Itens adicionados recentemente ao estoque</p></div>
+            <div class="div-wrapper"><p class="p">Produtos adicionados recentemente ao estoque</p>
+            </div>
             <div class="frame-4">
               <div class="frame-5">
-                <div class="lista">
-                  <div class="frame-6">
-                    <input type="checkbox" class="checkbox"> 
-                    <div class="text-wrapper-3">Arroz Bernardo - 1kg</div>
-                  </div>
-                  <div class="frame-6"><div class="text-wrapper-4">há 1 dia</div></div>
-                </div>
-                <div class="lista">
-                  <div class="frame-6">
-                    <input type="checkbox" class="checkbox"> 
-                    <div class="text-wrapper-3">Feijão Bernardo - 1kg</div>
-                  </div>
-                  <div class="frame-7"></div>
-                  <div class="text-wrapper-5">há 1 dia</div>
-                </div>
-                <div class="lista">
-                  <div class="frame-6">
-                    <input type="checkbox" class="checkbox"> 
-                    <div class="text-wrapper-3">Picles Bernardo - 1kg</div>
-                  </div>
-                  <div class="text-wrapper-5">xxxxxx</div>
-                </div>
-                <div class="lista">
-                  <div class="frame-6">
-                    <input type="checkbox" class="checkbox"> 
-                    <div class="text-wrapper-3">Creatina Bernardo - 1kg</div>
-                  </div>
-                  <div class="text-wrapper-5">xxxxxx</div>
-                </div>
-              </div>
-              <div class="frame-8"><div class="text-wrapper-6">Ver mais</div></div>
-              <button class="button"> Ver Mais</button>
-            </div>
-          </div>
-          <div class="overlap-2">
-            <div class="frame-9"><input type="text" class="text-wrapper-7" id="productNameInput" placeholder="Nome do produto"></div>
-            
-          </div>
-          <div class="overlap-3">
-            <div class="frame-10">
-              
-              <input type="number" class=" text-wrapper-7" id="quantityInput" placeholder="Quantidade de itens">
-          </div>
-          
-           
-          </div>
-         
+ <!-- Aqui começa a bagunça -->
+ <?php
+                    $usu_id = $_SESSION["id"];
+                    $estoq_id = $_SESSION["estoque"];
 
-          <div class="frame-14">
-            <button class="button-1"> Adcionar o item</button>
+                    $sql_consulta = "SELECT prod_nome,DATE_FORMAT(prod_inserted_at,'%d/%m/%Y %H:%i:%s') FROM produto WHERE prod_estoque = $estoq_id order by prod_inserted_at desc limit 8;";
+                    $query = $conexao->query($sql_consulta);
+                    $resultados = $query->fetch_all(PDO::FETCH_ASSOC);
+                    echo "<div class='lista'>
+                        <div class='frame-6'>
+                          <div class='text-wrapper-3'>Produto</div>
+                          </div>
+                          <div class='frame-6'><div class='text-wrapper-4'>Quando foi Adicionado</div></div>
+                        </div>";
+    
+                    foreach ($resultados as $linha){
+                      echo "
+                      <div class='lista'>
+                        <div class='frame-6'>
+                          <div class='text-wrapper-3'>$linha[0]</div>
+                          </div>
+                          <div class='frame-6'><div class='text-wrapper-4'>$linha[1]</div></div>
+                        </div>";
+                    }
+?>
+
+
+              </div>
+             </div>
           </div>
-          <div class="overlap-4">
+          <form action="../php/CadastrarProduto.php" method="post">
+            <div class="overlap-2">
+              <div class="frame-9"><input type="text" class="text-wrapper-7" id="NomeProduto" name="NomeProduto" placeholder="Nome do produto"></div>
+              
+            </div>
+            <div class="overlap-3">
+              <div class="frame-10">
+                
+                <input type="number" class=" text-wrapper-7" id="Quantidade" name="Quantidade" placeholder="Quantidade de itens">
+            </div>
            
+            </div>
+          
+
+            <div class="frame-14">
+              <button class="button-1" type="SUBMIT"> Adcionar o item</button>
+            </div>
+            <div class="overlap-4">
+          </form>
+
             <div class="frame-wrapper">
               <div class="frame-16"><div class="text-wrapper-11">Adicionar Produtos no estoque <b><?php echo $_SESSION['nome_estoque'] ?></b></div></div>
             </div>
