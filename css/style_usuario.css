@@ -244,6 +244,22 @@ border-width: 0px;
     background-color: #ffb6b6;
     border-radius: 3.48px;
   }
+
+  .desktop-usuario .frame-10 button {
+    display: flex;
+    border: none;
+    margin: 0px;
+    margin-left: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 15.92px;
+    padding: 9.55px;
+    position: relative;
+    background-color: #ffafaf;
+    border-radius: 6.37px;
+    cursor: pointer;
+    width: 100%;
+  }
   
   .desktop-usuario .text-wrapper-7 {
     position: relative;

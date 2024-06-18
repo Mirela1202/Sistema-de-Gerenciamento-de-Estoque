@@ -97,7 +97,7 @@ include ("../php/conexao.php");
             </div>
             <div class='frame-10'><div class='text-wrapper-7'> <form action='../php/removerUsuario.php' method='post'>
   <input type='hidden' name='id' value='$resultado[usu_id].'>
-  <input type='submit' value='Excluir'>
+  <button type='submit' value='Excluir'>Remover</button>
 </form></div></div>
           </div>";
   

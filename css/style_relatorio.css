@@ -370,6 +370,12 @@ a{
     border-color: var(--collection-1-AMARELO-OVO);
   }
   
+table,th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-family: "Montserrat-Bold", Helvetica;
+  text-align: center;
+}
   .desktop-RELATORIO-DE .frame-15 button {
     display: flex;
     width: 377px;
@@ -379,7 +385,7 @@ a{
     padding: 10px;
     position: absolute;
     top: 574px;
-    left: 832px;
+    left: 1200px;
     background-color: var(--collection-1-ROXO-ESCURO-CONTRASTE);
     border-radius: 8px;
     color: white; 
@@ -687,7 +693,7 @@ a{
   .frame-15 button {
     background-color: #47026c; /* Cor de fundo */
     color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
+    padding: 50px 20px; /* Espaçamento interno */
     border: none; /* Sem borda */
     border-radius: 5px; /* Cantos arredondados */
     cursor: pointer; /* Cursor ao passar por cima */

@@ -87,19 +87,68 @@ include ("../php/protect.php")
           <div class="frame-10">
             <label for="data-final" class="text-wrapper-6">Data Final</label>
             <input type="date" id="data-final" name="data-final" class="input-field" />
+            
           </div>
+          
         </div>
-        <div class="frame-12">
+        <div class="frame-15">
+          <button type="submit" class="text-wrapper-8">Carregar Relatório</button>
+        </div>
+         <div class="frame-12">
+<?php
+  include ("../php/conexao.php");
+  include ("../php/protect.php");
+
+  $estoque = $_SESSION["estoque"];
+  $data_inicial ='' ;
+  $data_fim='';
+  
+      $sql_code = "SELECT DATE_FORMAT(mov_data,'%d/%m/%Y') as DATA,
+	mov_qtd AS quantidade,
+	case
+	when mov_tipo = 1 then 'Entrada'
+	when mov_tipo = 0 then 'Saida'
+	Else 'desconhecido'
+	end as tipoMovimento,
+  produto.prod_nome
+  from movimentacao
+  left join produto on movimentacao.mov_prod = produto.prod_id where mov_est = $estoque;";
+
+$query = mysqli_query($conexao,$sql_code);
+$resultados =[];
+
+while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
+  $resultados[] = $row;
+}
+echo "<table>
+      <tr>
+        <th>Data Movimento</th>
+        <th>Quantidade</th>
+        <th>Tipo de Movimentaçõa</th>
+        <th>Produto Movimentado</th>";
+foreach($resultados as $resultado){
+  echo"<tr>
+          <td>$resultado[DATA]</td>
+          <td>$resultado[quantidade]</td>
+          <td>$resultado[tipoMovimento]</td>
+          <td>$resultado[prod_nome]</td>
+        </tr>
+        ";
+}
+echo "</table>";
+?>
+
+        </div>
+        </div>
+        <!-- <div class="frame-12">
           <div class="frame-13"><div class="text-wrapper-7">Lista</div></div>
           <input type="text" class="input-field" placeholder="Digite a lista que deseja" />
         </div>
         <div class="frame-14">
           <div class="frame-13"><div class="text-wrapper-7">Usuário</div></div>
           <input type="text" class="input-field" placeholder="Digite o nome do usuário que deseja" />
-        </div>
-        <div class="frame-15">
-          <button type="submit" class="text-wrapper-8">Carregar Relatório</button>
-        </div>
+        </div> -->
+
         <div class="overlap">
           <div class="frame-16">
             
