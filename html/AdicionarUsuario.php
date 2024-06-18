@@ -11,7 +11,7 @@ include ("../php/protect.php")
     <link rel="stylesheet" href="../css/style_AlterarSenha.css" />
   </head>
   <body>
-    <form action="../php/AlterarSenhaUsuario.php" method="post">
+    <form action="../php/AdicionarUsuarioEstoque.php" method="post">
     <div class="desktop">
       <div class="frame-wrapper">
         <div class="frame">
@@ -19,15 +19,8 @@ include ("../php/protect.php")
               <div class="frame-2">
                 <div class="text-wrapper"></div>
                 <div class="div-wrapper">
-                  <div class="text-wrapper-2">Senha Atual</div>
-                  <input type="password" id="senhaAtual" name="senhaAtual" placeholder="senha Atual">
-                </div>
-              </div>
-              <div class="frame-2">
-                <div class="text-wrapper"></div>
-                <div class="div-wrapper">
-                  <div class="text-wrapper-2"> Nova Senha</div>
-                  <input type="password" id="novaSenha" name="novaSenha" placeholder="Nova Senha">
+                  <div class="text-wrapper-2">Novo usuário</div>
+                  <input type="text" id="id_novo_usuario" name="id_novo_usuario" placeholder="ID Novo Usuario">
                 </div>
               </div>
             </div>
@@ -39,11 +32,11 @@ include ("../php/protect.php")
             </div>
             <div class="frame-4">
               <button type="submit" class="frame-5">
-                <div class="text-wrapper-5">Alterar a senha</div>
+                <div class="text-wrapper-5">Adicionar Usuario</div>
               </button>
          
             <p class="j-possui-login">
-                <span class="text-wrapper-6"><a href="usuario.php">Cancelar</a></span>
+                <a href="usuario.php"><span class="text-wrapper-6">Cancelar</span></a>
             </p>
           </div>
         </div>

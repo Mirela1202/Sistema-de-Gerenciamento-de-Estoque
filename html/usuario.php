@@ -19,7 +19,7 @@ include ("../php/conexao.php");
             <div class="frame-3">
               <div class="frame-4">
                 <img class="icon-bell-ringing" src="img/icon-bell-ringing.png" />
-                <div class="text-wrapper"><?php echo $_SESSION["nome"]?></div>
+                <div class="text-wrapper"><?php echo "$_SESSION[nome] -- ID:$_SESSION[id]"?></div>
               </div>
               <div class="frame-5">
                 <div class="ellipse"></div>
@@ -32,28 +32,27 @@ include ("../php/conexao.php");
         <div class="frame-6">
           <div class="text-wrapper-3">Usuários com Acesso ao Estoque <?php echo "<b>".$_SESSION['nome_estoque']."</b>"?></div>
           <button class="div-wrapper">
-            <div class="text-wrapper-4">Adicionar Usuários</div>
+            <div class="text-wrapper-4"> <a class="diferente" href="../html/AdicionarUsuario.php">Adicionar Usuários</a></div>
           </button>
         </div>
         <div class="frame-11">
           <div class="frame-wrapper">
             <div class="frame-12">
               <img class="img" src="../img/autism 1.svg" />
-              <div class="text-wrapper-8">Acessibilidade</div>
+              <div class="text-wrapper-8"><a class="sair" href="https://www.GOOGLE.COM">Acessibilidade</a></div>
             </div>
           </div>
           <div class="frame-wrapper">
             <div class="frame-12">
               <img class="img-2" src="../img/chat-bot 1.svg" />
-              <div class="text-wrapper-8">Fale Conosco</div>
+              <div class="text-wrapper-8"><a class="sair" href="https://wa.me/5569993668263">Fale Conosco</a></div>
             </div>
           </div>
           <div class="frame-13">
             <div class="frame-12">
               <img class="img-2" src="../img/comment-alt-question 1.svg" />
-              <div class="text-wrapper-8">Ajuda e perguntas frequentes</div>
+              <div class="text-wrapper-8"><a class="sair" href="https://pt.wikihow.com/">Ajuda e perguntas frequentes</a></div>
             </div>
-            <img class="chevron-double-right" src="img/chevron-double-right-1.svg" />
           </div>
           <div class="frame-13">
             <div class="frame-14">
@@ -65,7 +64,7 @@ include ("../php/conexao.php");
             <div class="frame-12">
               <img class="img-2" src="../img/user-circle 1.svg" />
               <p class="conectado-como-usu">
-                <span class="span">Conectado como: </span> <span class="text-wrapper-9"><?php echo $_SESSION["nome"]?></span>
+                <span class="span">Conectado como: </span> <span class="text-wrapper-9"><?php echo "$_SESSION[nome] ID: $_SESSION[id]" ?></span>
               </p>
             </div>
             <div class="frame-15">
@@ -81,7 +80,7 @@ include ("../php/conexao.php");
 <!--  -->
 <?php  
   $id_estoq = $_SESSION["estoque"];
-  $sql = "SELECT usuario.usu_nome,DATE_FORMAT(fil_inserted_at,'%d/%m/%Y %H:%i:%s') as DATACRIADO FROM filiado LEFT JOIN usuario ON filiado.fil_id_usuario = usuario.usu_id WHERE fil_estoq = $id_estoq;";
+  $sql = "SELECT usuario.usu_nome,usuario.usu_id,DATE_FORMAT(fil_inserted_at,'%d/%m/%Y %H:%i:%s') as DATACRIADO FROM filiado LEFT JOIN usuario ON filiado.fil_id_usuario = usuario.usu_id WHERE fil_estoq = $id_estoq;";
   $result = mysqli_query($conexao, $sql);
   $resultados = [];
   
@@ -96,14 +95,16 @@ include ("../php/conexao.php");
               <div class='text-wrapper-5'>$resultado[usu_nome]</div>
               <div class='text-wrapper-6'>$resultado[DATACRIADO]</div>
             </div>
-            <div class='frame-10'><div class='text-wrapper-7'> Remover Usuário</div></div>
+            <div class='frame-10'><div class='text-wrapper-7'> <form action='../php/removerUsuario.php' method='post'>
+  <input type='hidden' name='id' value='$resultado[usu_id].'>
+  <input type='submit' value='Excluir'>
+</form></div></div>
           </div>";
   
   }
 
 
 ?>
-
 <!--  -->
         </div>
         <img class="vector" src="img/vector-3.svg" />
@@ -136,7 +137,6 @@ include ("../php/conexao.php");
               <img class="img-5" src="../img/Vector.svg" />
               <div class="text-wrapper-18"><a href="../html/CadastroEstoque.php">Estoque</a></div>
             </div>
-            <img class="img-5" src="img/arrow-drop-down-1.svg" />
           </div>
           <div class="frame-31">
             <div class="frame-30">

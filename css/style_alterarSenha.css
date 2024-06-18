@@ -6,13 +6,15 @@
   justify-content: center;
   width: 100%;
 }
-.text-wrapper-6{
-  text-decoration: none;
-}
+
 .desktop .frame-wrapper {
   background-color: #ffffff;
   width: 1920px;
   height: 1080px;
+}
+
+a span.text-wrapper-6{
+  text-decoration: none;
 }
 
 .desktop .frame {
