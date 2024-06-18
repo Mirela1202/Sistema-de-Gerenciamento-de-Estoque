@@ -21,100 +21,70 @@ include ("../php/protect.php")
             <img class="vector" src="img/vector-1.svg" />
             <img class="img" src="img/vector-2.svg" />
           </div>
-          <div class="frame-6">
-            <button class="text-wrapper-5-button">Baixar lista completa</button>
+
         </div>
-        </div>
-        <div class="frame-8"><div class="text-wrapper-6">Produtos próximos do vencimento</div></div>
+        <div class="frame-8"><div class="text-wrapper-6">Estoques com Acesso</div></div>
         <div class="frame-wrapper">
           <div class="frame-9">
             <div class="frame-10">
-              <div class="lista">
-                <div class="frame-11">
-                  <input type="checkbox" class="checkbox"> 
-                  <div class="div-2">Arroz Bernardo - 1kg</div>
+            <?php
+              include ("../php/conexao.php");
+              include("../php/protect.php");
+
+              $usu_id = $_SESSION["id"];
+              $estoq_id = $_SESSION["estoque"];
+
+              $sql_consulta = "SELECT prod_nome,prod_qtd,prod_id, DATE_FORMAT(prod_inserted_at,'%d/%m/%Y %H:%i:%s') AS dataInserida FROM produto WHERE prod_estoque = $estoq_id";
+              $query = $conexao->query($sql_consulta);
+              $resultados = $query->fetch_all(PDO::FETCH_ASSOC);
+                  $count=0;
+
+              echo"<div class='lista'>
+                <div class='frame-11'>
+                  <div class='div-2'><b>Nome do produto/Quantidade</b></div>
                 </div>
-              </div>
-              <div class="lista">
-                <div class="frame-11">
-                  <input type="checkbox" class="checkbox"> 
-                  <div class="div-2">Feijão Bernardo - 1kg</div>
+              </div>";
+              foreach ($resultados as $linha){
+                echo "<div class='lista'>
+                <div class='frame-11'>
+                  <div class='div-2'>$linha[0] --</div>
+                  <div class='div-2'>$linha[1]</div>
                 </div>
-              </div>
-              <div class="lista">
-                <div class="frame-11">
-                  <input type="checkbox" class="checkbox"> 
-                  <div class="div-2">Picles Bernardo - 1kg</div>
-                </div>
-              </div>
-              <div class="lista">
-                <div class="frame-11">
-                  <input type="checkbox" class="checkbox"> 
-                  <div class="div-2">Creatina Bernardo - 1kg</div>
-                </div>
-              </div>
+              </div>";
+              }
+
+            ?>  
+            
+            
             </div>
-            <button class="button"> Ver Mais</button>
           </div>
         </div>
         <div class="frame-14">
           <div class="frame-9">
             <div class="frame-10">
-              <div class="lista">
-                <div class="frame-11">
-                  
-                  <div class="div-2">Arroz Bernardo - 1kg</div>
-                </div>
-                
-              </div>
-              <div class="lista">
-                <div class="frame-11">
-               
-                  <div class="div-2">Feijão Bernardo - 1kg</div>
-                </div>
-              </div>
-              <div class="lista">
-                <div class="frame-11">
-                  
-                  <div class="div-2">Picles Bernardo - 1kg</div>
-                </div>
-                
-              </div>
-              <div class="lista">
-                <div class="frame-11">
-                 
-                  <div class="div-2">Creatina Bernardo - 1kg</div>
-                </div>
-              </div>
+              <?php 
+               $usu_id = $_SESSION["id"];
+
+               $sql_consulta = "SELECT estoque.est_id,estoque.est_desc, usuario.usu_nome FROM filiado AS fil LEFT JOIN estoque ON fil.fil_estoq = estoque.est_id LEFT JOIN usuario ON fil.fil_master = usuario.usu_id WHERE fil_id_usuario = '$usu_id' OR fil_master = '$usu_id';";
+               $query = $conexao->query($sql_consulta);
+               $resultados = $query->fetch_all(PDO::FETCH_ASSOC);
+               echo"<div class='lista'>
+                 <div class='frame-11'>
+                   <div class='div-2'><b>Nome do Estoque</b></div>
+                 </div>
+               </div>";
+               foreach ($resultados as $linha){
+                 echo "<div class='lista'>
+                 <div class='frame-11'>
+                   <div class='div-2'>$linha[1]</div>
+                 </div>
+               </div>";
+               }             
+              ?>
             </div>
-            <button class="button"> Ver Mais</button>
-          </div>
+         </div>
         </div>
-        <div class="frame-15">
-          <div class="frame-10">
-            <div class="lista">
-              <div class="frame-11">
-                <input type="checkbox" class="checkbox"> 
-                <p class="lista-de-compras-do">
-                  <span class="span">Lista de compras do </span> <span class="text-wrapper-8">usuário 1</span>
-                </p>
-              </div>
-              <div class="frame-16"><div class="text-wrapper-9">Baixar Lista</div></div>
-            </div>
-            <div class="lista">
-              <div class="frame-11">
-                <input type="checkbox" class="checkbox"> 
-                <p class="div-2">
-                  <span class="text-wrapper-10">Lista de compras do </span>
-                  <span class="text-wrapper-8">usuário 2</span>
-                </p>
-              </div>
-              <div class="frame-16"><div class="text-wrapper-9">Baixar Lista</div></div>
-            </div>
-          </div>
-          <button class="button"> Ver Mais</button>
-    
-        </div>
+
         <div class="frame-17">
           <div class="frame-18">
             <div class="frame-19">
@@ -130,7 +100,7 @@ include ("../php/protect.php")
             <div class="ellipse-3"></div>
           </div>
         </div>
-        <a href="../html/LISTA.php"><div class="plus-wrapper"><img class="plus" src="../img/Group 12.svg" /></div></a>
+        <a  ><div class="plus-wrapper"><img class="plus" src="../img/Group 12.svg" /></div></a>
         <div class="text-wrapper-13">Compras de Maio</div>
         <div class="group">
           <div class="overlap-group-2">
@@ -155,20 +125,16 @@ include ("../php/protect.php")
             <img class="img-2" src="../img/smart-home-10.svg" />
             <div class="text-wrapper-18"><a href="../html/TELA INICIAL.php">Inicio</a></div>
           </div>
-          <div class="frame-24">
-            <img class="img-2" src="../img/group0.svg" />
-            <div class="text-wrapper-18"><a href="../html/LISTA.php">Listas</a></div>
-          </div>
           
-          <div class="frame-25">
+          <div class="frame-25-1">
             <img class="img-2" src="../img/user-10.svg" />
             <div class="text-wrapper-18"><a href="../html/usuario.php">Usuário</a></div>
           </div>
-          <div class="frame-25-1">
+          <div class="frame-29">
             <img class="img-2" src="../img/group0.svg">
             <div class="text-wrapper-18"><a href="../html/relatorio.php">Relatório</a></div>
           </div>
-          <div class="frame-26">
+          <div class="frame-24">
             <div class="frame-27">
               <img class="img-2" src="../img/Vector.svg" />
               <div class="text-wrapper-19">
@@ -176,13 +142,13 @@ include ("../php/protect.php")
               </div>
             </div>
           </div>
-          <div class="frame-28">
+          <div class="frame-26">
             <div class="frame-27">
               <img class="img-3" src="../img/group9.svg" />
               <div class="text-wrapper-20"><a href="../html/ADICIONAR_ESTOQUE.php">Adicionar Produto</a></div>
             </div>
           </div>
-          <div class="frame-29">
+          <div class="frame-28">
             <div class="frame-27">
               <img class="img-3" src="../img/eye-10.svg" />
               <div class="text-wrapper-20"><a href="../html/Ver Estoque.php">Ver Estoque</a></div>

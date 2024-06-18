@@ -28,9 +28,9 @@ CREATE TABLE IF NOT EXISTS `estoque` (
   PRIMARY KEY (`est_id`),
   KEY `est_titular` (`est_titular`),
   CONSTRAINT `estoque_ibfk_1` FOREIGN KEY (`est_titular`) REFERENCES `usuario` (`usu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Copiando dados para a tabela easystock.estoque: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela easystock.estoque: ~8 rows (aproximadamente)
 INSERT INTO `estoque` (`est_id`, `est_desc`, `est_criado_em`, `est_titular`) VALUES
 	(1, 'Thiago', '2024-06-16 15:10:42', 1),
 	(3, 'Pirulito Kids', '2024-06-16 15:52:30', 2),
@@ -39,7 +39,8 @@ INSERT INTO `estoque` (`est_id`, `est_desc`, `est_criado_em`, `est_titular`) VAL
 	(13, 'TESTE', '2024-06-16 23:23:03', 1),
 	(14, 'teste2', '2024-06-16 23:27:30', 1),
 	(15, 'test3', '2024-06-16 23:28:07', 1),
-	(16, 'test4', '2024-06-16 23:28:15', 1);
+	(16, 'test4', '2024-06-16 23:28:15', 1),
+	(17, 'mateus', '2024-06-17 22:41:12', 2);
 
 -- Copiando estrutura para tabela easystock.filiado
 CREATE TABLE IF NOT EXISTS `filiado` (
@@ -55,18 +56,18 @@ CREATE TABLE IF NOT EXISTS `filiado` (
   CONSTRAINT `filiado_ibfk_1` FOREIGN KEY (`fil_master`) REFERENCES `usuario` (`usu_id`),
   CONSTRAINT `filiado_ibfk_2` FOREIGN KEY (`fil_id_usuario`) REFERENCES `usuario` (`usu_id`),
   CONSTRAINT `filiado_ibfk_3` FOREIGN KEY (`fil_estoq`) REFERENCES `estoque` (`est_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Copiando dados para a tabela easystock.filiado: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela easystock.filiado: ~7 rows (aproximadamente)
 INSERT INTO `filiado` (`fil_id`, `fil_master`, `fil_id_usuario`, `fil_estoq`, `fil_inserted_at`) VALUES
-	(1, 1, 2, 1, '2024-06-16 15:35:36'),
-	(3, 2, 4, 3, '2024-06-16 20:04:57'),
 	(9, 1, 1, 3, '2024-06-16 17:54:07'),
-	(11, 2, 2, 3, '2024-06-16 19:39:48'),
 	(12, 1, 1, 13, '2024-06-16 23:23:03'),
 	(13, 1, 1, 14, '2024-06-16 23:27:30'),
 	(14, 1, 1, 15, '2024-06-16 23:28:07'),
-	(15, 1, 1, 16, '2024-06-16 23:28:15');
+	(15, 1, 1, 16, '2024-06-16 23:28:15'),
+	(21, 2, 2, 17, '2024-06-17 22:41:12'),
+	(22, 1, 1, 1, '2024-06-17 22:44:07'),
+	(23, 1, 2, 1, '2024-06-18 01:41:25');
 
 -- Copiando estrutura para procedure easystock.InsereUsuario
 DELIMITER //
@@ -92,12 +93,25 @@ CREATE TABLE IF NOT EXISTS `movimentacao` (
   `mov_prod` int NOT NULL,
   PRIMARY KEY (`mov_id`),
   KEY `mov_est` (`mov_est`),
-  KEY `mov_prod` (`mov_prod`),
-  CONSTRAINT `movimentacao_ibfk_1` FOREIGN KEY (`mov_est`) REFERENCES `estoque` (`est_id`),
-  CONSTRAINT `movimentacao_ibfk_2` FOREIGN KEY (`mov_prod`) REFERENCES `produto` (`prod_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `movimentacao_ibfk_1` FOREIGN KEY (`mov_est`) REFERENCES `estoque` (`est_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Copiando dados para a tabela easystock.movimentacao: ~0 rows (aproximadamente)
+INSERT INTO `movimentacao` (`mov_id`, `mov_data`, `mov_hora`, `mov_tipo`, `mov_qtd`, `mov_est`, `mov_prod`) VALUES
+	(1, '2024-06-18', '01:15:01', 1, 9, 1, 13),
+	(2, '2024-06-18', '01:16:42', 0, 8, 1, 13),
+	(3, '2024-06-18', '01:24:28', 1, 6, 1, 14),
+	(4, '2024-06-18', '01:33:39', 1, 8, 1, 14),
+	(5, '2024-06-18', '01:35:26', 0, 1, 1, 14),
+	(6, '2024-06-18', '01:35:45', 1, 2, 1, 14),
+	(7, '2024-06-18', '01:36:06', 0, 3, 1, 14),
+	(8, '2024-06-18', '13:41:37', 0, 1, 1, 5),
+	(9, '2024-06-18', '13:41:43', 0, 1, 1, 5),
+	(10, '2024-06-18', '13:41:53', 0, 2, 1, 6),
+	(11, '2024-06-18', '13:42:20', 0, 1, 1, 6),
+	(12, '2024-06-18', '13:42:26', 0, 1, 1, 6),
+	(13, '2024-06-18', '13:42:27', 1, 1, 1, 7),
+	(14, '2024-06-18', '13:44:02', 0, 1, 1, 6);
 
 -- Copiando estrutura para tabela easystock.produto
 CREATE TABLE IF NOT EXISTS `produto` (
@@ -111,9 +125,15 @@ CREATE TABLE IF NOT EXISTS `produto` (
   PRIMARY KEY (`prod_id`),
   KEY `prod_estoque` (`prod_estoque`),
   CONSTRAINT `produto_ibfk_1` FOREIGN KEY (`prod_estoque`) REFERENCES `estoque` (`est_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Copiando dados para a tabela easystock.produto: ~0 rows (aproximadamente)
+INSERT INTO `produto` (`prod_id`, `prod_nome`, `prod_qtd`, `prod_min`, `prod_max`, `prod_estoque`, `prod_inserted_at`) VALUES
+	(5, 'FG', 2, NULL, NULL, 1, '2024-06-17 21:40:19'),
+	(7, 'ADASD', 7, NULL, NULL, 1, '2024-06-17 21:40:19'),
+	(10, 'BB', 9, NULL, NULL, 1, '2024-06-17 21:40:19'),
+	(13, 'BB', 8, NULL, NULL, 1, '2024-06-18 01:15:01'),
+	(14, 'ADASD', 0, NULL, NULL, 1, '2024-06-18 01:24:28');
 
 -- Copiando estrutura para tabela easystock.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
@@ -147,6 +167,31 @@ DELIMITER ;
 SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `AdicionaNaFiliado` AFTER INSERT ON `estoque` FOR EACH ROW INSERT INTO filiado (fil_master,fil_id_usuario,fil_estoq,fil_inserted_at) VALUES (NEW.est_titular,NEW.est_titular, NEW.est_id,CURRENT_TIMESTAMP())//
+DELIMITER ;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
+
+-- Copiando estrutura para trigger easystock.AdicionaNaMovimentacao
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+DELIMITER //
+CREATE TRIGGER `AdicionaNaMovimentacao` AFTER INSERT ON `produto` FOR EACH ROW INSERT INTO movimentacao (mov_data,mov_hora,mov_tipo,mov_qtd,mov_est,mov_prod) VALUES (CURDATE(),CURTIME(),1,NEW.prod_qtd,NEW.prod_estoque,NEW.prod_id)//
+DELIMITER ;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
+
+-- Copiando estrutura para trigger easystock.InsereNaMovimentacao
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+DELIMITER //
+CREATE TRIGGER `InsereNaMovimentacao` AFTER UPDATE ON `produto` FOR EACH ROW BEGIN
+		DECLARE QTD INT ;
+		
+	IF OLD.prod_qtd > NEW.prod_qtd THEN
+		SET QTD = OLD.prod_qtd - NEW.prod_qtd;
+		INSERT INTO movimentacao (mov_data,mov_hora,mov_tipo,mov_qtd,mov_est,mov_prod) VALUES (CURDATE(),CURTIME(),0,QTD,NEW.prod_estoque,NEW.prod_id);
+	END IF;
+	IF OLD.prod_qtd < NEW.prod_qtd THEN
+		SET QTD = NEW.prod_qtd - OLD.prod_qtd;
+		INSERT INTO movimentacao (mov_data,mov_hora,mov_tipo,mov_qtd,mov_est,mov_prod) VALUES (CURDATE(),CURTIME(),1,QTD,NEW.prod_estoque,NEW.prod_id);
+	END IF;
+END//
 DELIMITER ;
 SET SQL_MODE=@OLDTMP_SQL_MODE;
 

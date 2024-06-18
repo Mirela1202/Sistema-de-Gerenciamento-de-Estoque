@@ -46,7 +46,7 @@ include ("../php/conexao.php");
         <div class="frame-10">
           <div class="text-wrapper-7">Lista completa</div>
           <div class="frame-11">
-            <button type="submit" class="text-wrapper-8">Baixar lista completa</button>
+            <button type="submit" class="text-wrapper-8">Inserir Produto na Lista</button>
           </div>
         </div>
         <div class="overlap-group">
@@ -95,7 +95,6 @@ include ("../php/conexao.php");
           <div class="frame-21">
             <div class="frame-22">
               <?php 
-                   
 
               ?>
 <!--  -->
